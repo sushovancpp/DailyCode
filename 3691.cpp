@@ -1,4 +1,4 @@
-class SparseTableRMQ {
+class S {
 public:
     int n;
     int maxLog;
@@ -6,7 +6,7 @@ public:
     vector<vector<int>> fMin;
     vector<int> lg;
 
-    SparseTableRMQ(const vector<int>& data) {
+    S(const vector<int>& data) {
         n = data.size();
         maxLog = 32 - __builtin_clz(n) + 1;
         fMax.assign(n, vector<int>(maxLog, 0));
@@ -45,7 +45,7 @@ class Solution {
 public:
     long long maxTotalValue(vector<int>& nums, int k) {
         int n = nums.size();
-        SparseTableRMQ st(nums);
+        S st(nums);
         auto cmp = [](const tuple<long long, int, int>& a, const tuple<long long, int, int>& b) {
             return get<0>(a) < get<0>(b);
         };
