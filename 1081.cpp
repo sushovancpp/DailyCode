@@ -16,7 +16,7 @@ public:
             char currentChar = s[i];
             int charIndex = currentChar - 'a';
 
-            if ((usedCharMask >> charIndex) & 1) {
+            if ((usedCharMask >> charIndex) & 1) { 
                 continue;
             }
           
