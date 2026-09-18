@@ -8,7 +8,7 @@ public:
         for (int i = 0; i < stringLength; ++i) {
             lastOccurrence[s[i] - 'a'] = i;
         }
-
+ 
         string result;
         int usedCharMask = 0;
 
